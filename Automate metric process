@@ -1,0 +1,29 @@
+Master File Preparation:
+
+The TechADS Controls Team opens the master Excel file.
+The file contains monthly metrics and control failures for three domains: Change, Application, and RMO.
+
+
+Failure Classification:
+
+The Controls Team reviews and classifies each failure as included or excluded.
+Any failure that should not be counted as a failure is marked as excluded.
+Metric Calculation:
+
+A Python script processes the master Excel file.
+It calculates the final metric values, accounting for excluded failures.
+
+
+PowerPoint Report Generation:
+
+The script inputs the final metric values into a PARC Metrics PowerPoint template for each domain.
+
+
+Data Upload to Governance Systems:
+
+The script uploads the final metric values and the generated PowerPoint reports to the Governance SharePoint and Database.
+
+
+Final Data Submission to ORCIT:
+
+The script uploads the final metric values to ORCIT.
