@@ -1,7 +1,0 @@
-Column Name	Validation Type	Validation Logic	SQL Condition
-CUSTOMER_ID	Numeric	Must contain only digits (integer values)	REGEXP_LIKE(CUSTOMER_ID, '^\d+$')
-EMAIL	Email Format	Must follow standard email format (name@example.com)	REGEXP_LIKE(EMAIL, '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$')
-PHONE	Numeric	Must be exactly 10 digits (only numbers)	REGEXP_LIKE(PHONE, '^\d{10}$')
-DOB	Date	Must be a valid date in YYYY-MM-DD format	REGEXP_LIKE(DOB, '^\d{4}-\d{2}-\d{2}$') AND TO_DATE(DOB, 'YYYY-MM-DD') IS NOT NULL
-ZIP_CODE	Numeric	Must be 5-digit ZIP code	REGEXP_LIKE(ZIP_CODE, '^\d{5}$')
-CUSTOMER_NAME	VARCHAR	Must not be empty, max 50 characters, only letters, spaces, and hyphens	CUSTOMER_NAME IS NOT NULL AND LENGTH(CUSTOMER_NAME) <= 50 AND REGEXP_LIKE(CUSTOMER_NAME, '^[A-Za-z\s\-]+$')
